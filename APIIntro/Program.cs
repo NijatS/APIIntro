@@ -1,15 +1,23 @@
 using APIIntro.Context;
+using APIIntro.Profiles.Categories;
+using APIIntro.Repositories.Implementations;
+using APIIntro.Repositories.Interfaces;
+using APIIntro.Validations.Categories;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()?.AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<CategoryPostDtoValidation>());
+
+builder.Services.AddAutoMapper(typeof(CategoryProfile));
 builder.Services.AddDbContext<ApiDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
