@@ -2,6 +2,8 @@ using APIIntro.Context;
 using APIIntro.Profiles.Categories;
 using APIIntro.Repositories.Implementations;
 using APIIntro.Repositories.Interfaces;
+using APIIntro.Services.Implemantations;
+using APIIntro.Services.Interfaces;
 using APIIntro.Validations.Categories;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +20,7 @@ builder.Services.AddDbContext<ApiDbContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

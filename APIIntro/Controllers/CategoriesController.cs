@@ -2,6 +2,7 @@
 using APIIntro.Dtos.Categories;
 using APIIntro.Entities;
 using APIIntro.Repositories.Interfaces;
+using APIIntro.Services.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,72 +13,42 @@ namespace APIIntro.Controllers
     [Route("api/[controller]")]
     public class CategoriesController : ControllerBase
     {
-        private readonly IMapper _mapper;
-        private readonly ICategoryRepository _repository;
+        private readonly ICategoryService _service;
 
-        public CategoriesController(IMapper mapper, ICategoryRepository repository)
+        public CategoriesController(ICategoryService service)
         {
-            _mapper = mapper;
-            _repository = repository;
+            _service = service;
         }
-
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            IEnumerable<Category> categories = await _repository.GetAllAsync(x => !x.IsDeleted);
-            return StatusCode(200,categories);
+            var result = await _service.GetAllAsync();
+            return StatusCode(result.StatusCode,result);
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            Category? category = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted);
-            if(category == null)
-            {
-                return StatusCode(404);
-            }
-            return StatusCode(200,category);
+            var result = await _service.GetAsync(id);
+            return StatusCode(result.StatusCode,result);
         }
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CategoryPostDto dto)
         {
-            if (await _repository.IsExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower())) {
-                return StatusCode(400, new { description = $"{dto.Name} Already exists" });
-            }
-            Category category = _mapper.Map<Category>(dto); 
-            await _repository.AddAsync(category);
-            await _repository.SaveAsync();
-            return StatusCode(201, category);
+            var result = await _service.CreateAsync(dto);
+            return StatusCode(result.StatusCode, result);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            Category? category = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted);
-            if (category == null)
-            {
-                return StatusCode(404);
-            }
-            category.IsDeleted = true;
-            await _repository.SaveAsync();
-            return StatusCode(204);
+            var result = await _service.RemoveAsync(id);
+            return StatusCode(result.StatusCode);
         }
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] CategoryUpdateDto dto)
         {
-            if (await _repository.IsExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower()))
-            {
-                return StatusCode(400, new { description = $"{dto.Name} Already exists" });
-            }
-
-            Category? update = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted);
-            if (update == null)
-            {
-                return StatusCode(404);
-            }
-            update.Name = dto.Name;
-            update.Description = dto.Description;
-            await _repository.SaveAsync();
-            return StatusCode(204);
+            var result = await _service.UpdateAsync(id, dto);
+            return StatusCode(result.StatusCode, result);
         }
     }
 }
