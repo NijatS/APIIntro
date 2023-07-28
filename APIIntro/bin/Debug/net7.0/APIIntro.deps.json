@@ -738,7 +738,8 @@
       "APIIntro.Data/1.0.0": {
         "dependencies": {
           "APIIntro.Core": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.9"
+          "Microsoft.EntityFrameworkCore": "7.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9"
         },
         "runtime": {
           "APIIntro.Data.dll": {}

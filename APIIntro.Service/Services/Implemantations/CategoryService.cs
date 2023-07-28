@@ -101,7 +101,6 @@ namespace APIIntro.Service.Services.Implemantations
                 };
             }
             update.Name = dto.Name;
-            update.Description = dto.Description;
             await _repository.SaveAsync();
             return new ApiResponse
             {

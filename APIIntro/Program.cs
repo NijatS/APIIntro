@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers()?.AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<CategoryPostDtoValidation>());
 
-builder.Services.AddAutoMapper(typeof(CategoryProfile));
+builder.Services.AddAutoMapper(typeof(ProductProfile));
 builder.Services.AddDbContext<ApiDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
