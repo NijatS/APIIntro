@@ -86,3 +86,4 @@ C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Service.
 C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Service.pdb
 C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Core.pdb
 C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Data.pdb
+C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.staticwebassets.runtime.json

@@ -100,6 +100,7 @@ namespace APIIntro.Service.Services.Implemantations
                     StatusCode = 404
                 };
             }
+            update.UpdatedAt = DateTime.UtcNow.AddHours(4);
             update.Name = dto.Name;
             await _repository.SaveAsync();
             return new ApiResponse

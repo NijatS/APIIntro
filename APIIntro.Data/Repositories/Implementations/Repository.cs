@@ -1,6 +1,7 @@
 ﻿using APIIntro.Data.Context;
 using APIIntro.Core.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace APIIntro.Repositories.Implementations
 {
@@ -18,14 +19,30 @@ namespace APIIntro.Repositories.Implementations
             await _context.Set<T>().AddAsync(entity);
         }
 
-        public async Task<IQueryable<T>> GetAllAsync(System.Linq.Expressions.Expression<Func<T, bool>> expression)
+        public async Task<IQueryable<T>> GetAllAsync(System.Linq.Expressions.Expression<Func<T, bool>> expression, params string[] includes)
         {
-            return _context.Set<T>().Where(expression);
+            var query =_context.Set<T>().Where(expression);
+            if (includes is not null)
+            {
+                foreach(var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+            return query;
         }
 
-        public async Task<T> GetAsync(System.Linq.Expressions.Expression<Func<T, bool>> expression)
+        public async Task<T> GetAsync(System.Linq.Expressions.Expression<Func<T, bool>> expression, params string[] includes)
         {
-            return await _context.Set<T>().Where(expression).FirstOrDefaultAsync();
+            var query = _context.Set<T>().Where(expression);
+            if (includes is not null)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+            return await query.FirstOrDefaultAsync();
         }
 
         public async Task<bool> IsExsist(System.Linq.Expressions.Expression<Func<T, bool>> expression)

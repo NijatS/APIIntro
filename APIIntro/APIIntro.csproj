@@ -25,4 +25,8 @@
     <ProjectReference Include="..\APIIntro.Service\APIIntro.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\assests\images\products\" />
+  </ItemGroup>
+
 </Project>
