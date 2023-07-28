@@ -1,0 +1,15 @@
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\bin\Debug\net7.0\APIIntro.Data.deps.json
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\bin\Debug\net7.0\APIIntro.Data.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\bin\Debug\net7.0\APIIntro.Data.pdb
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\bin\Debug\net7.0\APIIntro.Core.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\bin\Debug\net7.0\APIIntro.Core.pdb
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\APIIntro.Data.csproj.AssemblyReference.cache
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\APIIntro.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\APIIntro.Data.AssemblyInfoInputs.cache
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\APIIntro.Data.AssemblyInfo.cs
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\APIIntro.Data.csproj.CoreCompileInputs.cache
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\APIIntro.Data.csproj.CopyComplete
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\APIIntro.Data.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\refint\APIIntro.Data.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\APIIntro.Data.pdb
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Data\obj\Debug\net7.0\ref\APIIntro.Data.dll

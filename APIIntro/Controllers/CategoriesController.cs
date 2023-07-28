@@ -1,9 +1,7 @@
-﻿using APIIntro.Context;
-using APIIntro.Dtos.Categories;
-using APIIntro.Entities;
-using APIIntro.Repositories.Interfaces;
-using APIIntro.Services.Interfaces;
-using AutoMapper;
+﻿using APIIntro.Data.Context;
+using APIIntro.Service.Dtos.Categories;
+using APIIntro.Core.Entities;
+using APIIntro.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

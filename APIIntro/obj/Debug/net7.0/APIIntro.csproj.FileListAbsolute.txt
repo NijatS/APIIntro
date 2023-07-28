@@ -79,3 +79,10 @@ C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\FluentValidation.
 C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\libman.json
+C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Core.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Data.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Service.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Service.pdb
+C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Core.pdb
+C:\Users\Nijat\source\repos\APIIntro\APIIntro\bin\Debug\net7.0\APIIntro.Data.pdb

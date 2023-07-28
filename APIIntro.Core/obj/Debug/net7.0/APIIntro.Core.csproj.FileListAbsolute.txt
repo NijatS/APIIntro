@@ -1,0 +1,12 @@
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\bin\Debug\net7.0\APIIntro.Core.deps.json
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\bin\Debug\net7.0\APIIntro.Core.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\bin\Debug\net7.0\APIIntro.Core.pdb
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\obj\Debug\net7.0\APIIntro.Core.csproj.AssemblyReference.cache
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\obj\Debug\net7.0\APIIntro.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\obj\Debug\net7.0\APIIntro.Core.AssemblyInfoInputs.cache
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\obj\Debug\net7.0\APIIntro.Core.AssemblyInfo.cs
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\obj\Debug\net7.0\APIIntro.Core.csproj.CoreCompileInputs.cache
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\obj\Debug\net7.0\APIIntro.Core.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\obj\Debug\net7.0\refint\APIIntro.Core.dll
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\obj\Debug\net7.0\APIIntro.Core.pdb
+C:\Users\Nijat\source\repos\APIIntro\APIIntro.Core\obj\Debug\net7.0\ref\APIIntro.Core.dll

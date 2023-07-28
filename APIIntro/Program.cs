@@ -1,12 +1,12 @@
-using APIIntro.Context;
-using APIIntro.Profiles.Categories;
-using APIIntro.Repositories.Implementations;
-using APIIntro.Repositories.Interfaces;
-using APIIntro.Services.Implemantations;
-using APIIntro.Services.Interfaces;
-using APIIntro.Validations.Categories;
+using APIIntro.Data.Context;
+using APIIntro.Service.Profiles.Categories;
+using APIIntro.Service.Services.Implemantations;
+using APIIntro.Service.Services.Interfaces;
+using APIIntro.Service.Validations.Categories;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using APIIntro.Data.Repositories.Implementations;
+using APIIntro.Core.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

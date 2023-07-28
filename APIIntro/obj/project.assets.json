@@ -1317,6 +1317,47 @@
             "rid": "win"
           }
         }
+      },
+      "APIIntro.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/APIIntro.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APIIntro.Core.dll": {}
+        }
+      },
+      "APIIntro.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "APIIntro.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.9"
+        },
+        "compile": {
+          "bin/placeholder/APIIntro.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APIIntro.Data.dll": {}
+        }
+      },
+      "APIIntro.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "APIIntro.Data": "1.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "FluentValidation": "11.6.0",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.6.0"
+        },
+        "compile": {
+          "bin/placeholder/APIIntro.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APIIntro.Service.dll": {}
+        }
       }
     }
   },
@@ -4076,14 +4117,26 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "APIIntro.Core/1.0.0": {
+      "type": "project",
+      "path": "../APIIntro.Core/APIIntro.Core.csproj",
+      "msbuildProject": "../APIIntro.Core/APIIntro.Core.csproj"
+    },
+    "APIIntro.Data/1.0.0": {
+      "type": "project",
+      "path": "../APIIntro.Data/APIIntro.Data.csproj",
+      "msbuildProject": "../APIIntro.Data/APIIntro.Data.csproj"
+    },
+    "APIIntro.Service/1.0.0": {
+      "type": "project",
+      "path": "../APIIntro.Service/APIIntro.Service.csproj",
+      "msbuildProject": "../APIIntro.Service/APIIntro.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "AutoMapper >= 12.0.1",
-      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
-      "FluentValidation.AspNetCore >= 11.3.0",
-      "FluentValidation.DependencyInjectionExtensions >= 11.6.0",
+      "APIIntro.Service >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.9",
       "Microsoft.EntityFrameworkCore >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.9",
@@ -4119,7 +4172,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Nijat\\source\\repos\\APIIntro\\APIIntro.Service\\APIIntro.Service.csproj": {
+              "projectPath": "C:\\Users\\Nijat\\source\\repos\\APIIntro\\APIIntro.Service\\APIIntro.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4132,22 +4189,6 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
-          "AutoMapper": {
-            "target": "Package",
-            "version": "[12.0.1, )"
-          },
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-            "target": "Package",
-            "version": "[12.0.1, )"
-          },
-          "FluentValidation.AspNetCore": {
-            "target": "Package",
-            "version": "[11.3.0, )"
-          },
-          "FluentValidation.DependencyInjectionExtensions": {
-            "target": "Package",
-            "version": "[11.6.0, )"
-          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.9, )"
