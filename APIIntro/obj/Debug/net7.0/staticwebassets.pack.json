@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Nijat\\source\\repos\\APIIntro\\APIIntro\\wwwroot\\assests\\images\\products\\236e3242-5f1b-47f5-b0f7-201d2a3612e0download (1).jpg",
+      "PackagePath": "staticwebassets\\assests\\images\\products\\236e3242-5f1b-47f5-b0f7-201d2a3612e0download (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\source\\repos\\APIIntro\\APIIntro\\wwwroot\\assests\\images\\products\\ac8396a9-fba8-4b46-b5ce-81cb4243a2a5download.jpg",
+      "PackagePath": "staticwebassets\\assests\\images\\products\\ac8396a9-fba8-4b46-b5ce-81cb4243a2a5download.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.APIIntro.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.APIIntro.props",
+      "PackagePath": "build\\APIIntro.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.APIIntro.props",
+      "PackagePath": "buildMultiTargeting\\APIIntro.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.APIIntro.props",
+      "PackagePath": "buildTransitive\\APIIntro.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

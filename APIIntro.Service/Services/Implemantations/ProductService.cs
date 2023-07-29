@@ -6,6 +6,7 @@ using APIIntro.Service.Services.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
 using APIIntro.Service.Extensions;
+using Microsoft.AspNetCore.Http;
 
 namespace APIIntro.Service.Services.Implemantations
 {
@@ -15,17 +16,19 @@ namespace APIIntro.Service.Services.Implemantations
         private readonly IProductRepository _repository;
         private readonly ICategoryRepository _categoryRepository;
         private readonly IWebHostEnvironment _evn;
-        public ProductService(IProductRepository repository, IMapper mapper, ICategoryRepository categoryRepository, IWebHostEnvironment evn)
+        private readonly IHttpContextAccessor _http;
+        public ProductService(IProductRepository repository, IMapper mapper, ICategoryRepository categoryRepository, IWebHostEnvironment evn, IHttpContextAccessor http)
         {
             _repository = repository;
             _mapper = mapper;
             _categoryRepository = categoryRepository;
             _evn = evn;
+            _http = http;
         }
 
         public async Task<ApiResponse> CreateAsync(ProductPostDto dto)
         {
-            if(!await _categoryRepository.IsExsist(x=>x.Id == dto.CategoryId))
+            if (!await _categoryRepository.IsExsist(x => x.Id == dto.CategoryId))
             {
                 return new ApiResponse
                 {
@@ -34,7 +37,9 @@ namespace APIIntro.Service.Services.Implemantations
                 };
             }
             Product product = _mapper.Map<Product>(dto);
-            product.Image = dto.file.CreateImage(_evn.WebRootPath, "assets/images/products");
+            product.Image = dto.file.CreateImage(_evn.WebRootPath, "assests/images/products");
+            product.ImageUrl = _http.HttpContext.Request.Scheme + "://" + _http.HttpContext.Request.Host
+                + $"assests/images/products/{product.Image}";
             await _repository.AddAsync(product);
             await _repository.SaveAsync();
             return new ApiResponse
